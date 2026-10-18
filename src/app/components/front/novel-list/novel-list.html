@@ -1,1 +1,20 @@
-<h2>Nos romans</h2>
+
+    <h2>Nos romans</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Titre</th>
+            <th>Infos</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(book of novels(); track book.id ){
+        <tr>
+            <td> {{book.id}}</td>
+            <td>{{book.title |titlecase }}</td>
+            <td><button class="btn btn-info">Infos</button></td>
+        </tr>
+        }
+    </tbody>
+</table>
