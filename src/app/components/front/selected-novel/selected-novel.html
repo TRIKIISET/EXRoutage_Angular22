@@ -1,0 +1,25 @@
+@if(novel()){
+<div class="row justify-content-center my-5">
+    <div class="col-sm-6 col-lg-4">
+        <div class="card text-center">
+    <div class="card-header">
+        Auteur: {{novel()?.author}}
+
+    </div>
+    <div class="card-body">
+        <h5 class="card-title" [class.text-primary]="novel()?.isNew" > {{novel()?.title |uppercase}}</h5>
+        <p class="card-text">Catégorie: {{novel()?.category}}</p>
+        <span> Prix: {{novel()?.price}} DT</span>
+    </div>
+    <div class="card-footer d-flex justify-content-around">
+        <button class ="btn btn-dark " routerLink="/allBooks/novels">Retour</button>
+        <button class="btn btn-danger" (click)="onDelete(novel()!.id)">Supprimer</button>
+    </div>
+</div>
+    </div>
+
+</div>
+
+}@else {
+<div>Le roman n'existe pas</div>
+}

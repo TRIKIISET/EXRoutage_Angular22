@@ -13,7 +13,7 @@
         <tr>
             <td> {{book.id}}</td>
             <td>{{book.title |titlecase }}</td>
-            <td><button class="btn btn-info">Infos</button></td>
+            <td><button class="btn btn-info" [routerLink]="['/allBooks/novels',book.id]">Infos</button></td>
         </tr>
         }
     </tbody>

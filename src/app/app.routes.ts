@@ -6,6 +6,7 @@ import { NovelList } from './components/front/novel-list/novel-list';
 import { Aboutus } from './components/front/aboutus/aboutus';
 import { Error } from './components/error/error';
 import { BiographyList } from './components/front/biography-list/biography-list';
+import { SelectedNovel } from './components/front/selected-novel/selected-novel';
 
 export const routes: Routes = [
     { path: 'presentation', title: 'Présentation', component: Presentation },
@@ -15,6 +16,7 @@ export const routes: Routes = [
             { path: 'poetry', title: 'Poésie', component: PoetryList },
             { path: 'biography', title: 'Biographie', component: BiographyList },
             { path: 'novels', title: 'Roman', component: NovelList },
+            { path: 'novels/:idNovel', title: ' Sélectionné', component: SelectedNovel },
             { path: '', redirectTo: 'novels', pathMatch: 'full' }
         ]
     },
